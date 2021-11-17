@@ -45,7 +45,7 @@ public class EleveServlet extends HttpServlet {
 		request.setAttribute("eleve", eleve);
 		
 		// Je renvoi vers le JSP de post
-		request.getRequestDispatcher("/WEB-INF/formation.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/eleve.jsp").forward(request, response);
 	}
 
 	/**

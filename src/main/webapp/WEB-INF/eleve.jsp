@@ -14,5 +14,7 @@
 	<h6> <%= eleve.getNote() %></h6>
 	<h5> Titre Formation :</h5> 
 	<h6> <%= eleve.getFormation().getTitre() %></h6>
+	<br/>
+	<a href='/exoFormation/lesEleves'> Retour à la liste des élèves </a>
 	 
 <%@ include file='../fragments/footer.jsp' %>

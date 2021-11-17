@@ -34,6 +34,7 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("do post de LOGIN");
 		//Récupération des valeurs du formulaire
 		String login = request.getParameter("txtLogin");
 		String password = request.getParameter("txtPassword");

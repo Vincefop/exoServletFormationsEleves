@@ -9,5 +9,10 @@
 			<a href='/exoFormation/eleve?nom=<%= eleve.getNom() %>'><%= eleve.getNom() %></a>
 		</li>
 	<% } %>
-</ul>
+	</ul>
+
+	<br/>
+	<br/>
+	<a href='/exoFormation/accueil'> Retour à l'accueil </a>
+	
 <%@ include file='../fragments/footer.jsp' %>

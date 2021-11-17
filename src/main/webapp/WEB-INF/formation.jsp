@@ -10,6 +10,7 @@
 	<p>
 	Contiendra : <b><%= formation.getNbreEleve() %> élèves</b>
 	</p>
-	
+	<br/>
+	<a href='/exoFormation/lesFormations'> Retour à la liste des formations </a>
 	 
 <%@ include file='../fragments/footer.jsp' %>

@@ -25,7 +25,7 @@ public class FormationsService {
 	    	
 	    	for (int i = 1; i <= 5; i++) {
     			lesFormations.add(
-    					new Formation("formation"+i, "programme :dzbh-" +i, i)
+    					new Formation("formation"+i, "programme:dzbh-" +i, i)
     			);
     		}
 	    	
@@ -33,7 +33,7 @@ public class FormationsService {
 			// et je les injecte dans ma liste d'élèves
 	    	for (Formation formation : lesFormations) {
 				for (int i = 0; i <formation.getNbreEleve(); i++) {
-		    		lesEleves.add(new Eleve("Nom" + i + " - " + formation.getTitre(), "prenom"+ i, 20+i, new Random().nextInt(21), formation));
+		    		lesEleves.add(new Eleve("Nom" + i + "-" + formation.getTitre(), "prenom"+ i, 20+i, new Random().nextInt(21), formation));
 				}
 	    	}
 	    	
