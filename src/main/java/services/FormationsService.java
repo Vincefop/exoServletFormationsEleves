@@ -70,4 +70,16 @@ public class FormationsService {
 			}
 			return res;
 		}
+		
+		// Méthode qui permet de récupèrer une formation selon son titre
+		public Eleve getEleveByName(String nomEleve) {
+			Eleve res = null;
+			for (Eleve eleve : lesEleves) {
+				if (eleve.getNom().equals(nomEleve)) {
+					res = eleve;
+					break;
+				}
+			}
+			return res;
+		}
 }
