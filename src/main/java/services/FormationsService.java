@@ -53,6 +53,12 @@ public class FormationsService {
 			return this.lesFormations; 
 		}
 		
+		// Méthode qui renvoi la liste des eleves
+		public List<Eleve> getEleves() {
+			return this.lesEleves; 
+		}
+		
+		
 		// Méthode qui permet de récupèrer une formation selon son titre
 		public Formation getFormationByTitle(String formationTitle) {
 			Formation res = null;
