@@ -53,15 +53,15 @@ public class FormationsService {
 			return this.lesFormations; 
 		}
 		
-		// Méthode qui permet de récupèrer un élève selon sa formation
-		public Eleve getEleveByFormation(String formationTitle) {
-			Article response = null;
-			for (Article post : posts) {
-				if (post.getTitle().equals(title)) {
-					response = post;
-					break;
-				}
-			}
-			return response;
-		}
+//		// Méthode qui permet de récupèrer un élève selon sa formation
+//		public Eleve getEleveByFormation(String formationTitle) {
+//			Eleve res = null;
+//			for (Eleve eleve : lesEleves) {
+//				if (post.getTitle().equals(title)) {
+//					response = post;
+//					break;
+//				}
+//			}
+//			return response;
+//		}
 }

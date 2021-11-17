@@ -1,12 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-
-</body>
-</html>
+<%@page import="java.util.List"%>
+<%@page import="models.Formation"%>
+<%@ include file='../fragments/header.jsp' %>
+	<h1> Bienvenue sur les formations</h1>
+	
+	<ul>
+	<% for (Formation formation : (List<Formation>) request.getAttribute("formations")) { %>
+		<li>	
+			<a href="/exoFormation/formation?title=<%= formation.getTitre() %>"><%= formation.getTitre() %></a>
+		</li>
+	<% } %>
+</ul>
+	
+	 
+<%@ include file='../fragments/footer.jsp' %>
