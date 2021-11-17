@@ -1,16 +1,16 @@
 <%@ include file='./fragments/header.jsp' %>
 
-	<h1> Hello index.jsp</h1>
+	<h1> Bienvenue </h1>
 	
 	<h3>Veuillez vous identifier : </h3>
 	
 	<form method='post' action='login'>
 		<label for='txtLogin'>Login : </label>
-		<input name='txtLogin' type='text' value ='${login}' autofocus /><br/>
+		<input id='txtLogin' name='txtLogin' type='text' value ='${login}' autofocus /><br/>
 		<label for='txtPassword'>Password : </label>
-		<input name='txtPassword' type='password' value ='${password}'/> <br/>
+		<input id='txtPassword' name='txtPassword' type='password' value ='${password}'/> <br/>
 		<br/>
-		<input name='btnConnect' type='submit' /> <br/>
+		<input name='btnConnect' type='submit' value='Valider' /> <br/>
 	</form>
 	
 	

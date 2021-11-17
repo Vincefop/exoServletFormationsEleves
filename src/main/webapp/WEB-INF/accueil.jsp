@@ -1,4 +1,5 @@
 <%@ include file='../fragments/header.jsp' %>
+
 	<h1> Bienvenue à l'accueil</h1>
 	
 	<a href='<%= request.getContextPath() %>/lesFormations'> - Liste des formations </a>

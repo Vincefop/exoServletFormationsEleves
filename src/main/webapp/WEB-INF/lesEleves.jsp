@@ -1,6 +1,7 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="models.Eleve"%>
 <%@ include file='../fragments/header.jsp' %>
+
 	<h1>  Les Eleves </h1>
 	
 	<ul>

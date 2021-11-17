@@ -1,5 +1,6 @@
 <%@page import="models.Formation"%>
 <%@ include file='../fragments/header.jsp' %>
+
 	<h1> Ma formation </h1>
 	
 	<% Formation formation = (Formation) request.getAttribute("formation"); %>

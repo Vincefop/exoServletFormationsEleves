@@ -1,6 +1,7 @@
 ²<%@page import="java.util.ArrayList"%>
 <%@page import="models.Formation"%>
 <%@ include file='../fragments/header.jsp' %>
+
 	<h1> Bienvenue sur les formations</h1>
 	
 	<ul>

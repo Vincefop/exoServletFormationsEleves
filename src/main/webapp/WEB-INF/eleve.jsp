@@ -1,6 +1,7 @@
 <%@page import="models.Eleve"%>
 <%@page import="models.Formation"%>
 <%@ include file='../fragments/header.jsp' %>
+
 	<h1> Un eleve </h1>
 	
 	<% Eleve eleve = (Eleve) request.getAttribute("eleve"); %>
