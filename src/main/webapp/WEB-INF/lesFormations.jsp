@@ -6,7 +6,7 @@
 	<ul>
 	<% for (Formation formation : (List<Formation>) request.getAttribute("formations")) { %>
 		<li>	
-			<a href="/exoFormation/formation?title=<%= formation.getTitre() %>"><%= formation.getTitre() %></a>
+			<a href="/exoFormation/formation?titre=<%= formation.getTitre() %>"><%= formation.getTitre() %></a>
 		</li>
 	<% } %>
 </ul>

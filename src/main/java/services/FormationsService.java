@@ -23,7 +23,7 @@ public class FormationsService {
 			// Je crée une liste de formations factice 
 			// et je les injecte dans mon tableau d'articles
 	    	
-	    	for (int i = 0; i < 5; i++) {
+	    	for (int i = 1; i <= 5; i++) {
     			lesFormations.add(
     					new Formation("formation"+i, "programme :dzbh-" +i, i)
     			);
@@ -53,15 +53,15 @@ public class FormationsService {
 			return this.lesFormations; 
 		}
 		
-//		// Méthode qui permet de récupèrer un élève selon sa formation
-//		public Eleve getEleveByFormation(String formationTitle) {
-//			Eleve res = null;
-//			for (Eleve eleve : lesEleves) {
-//				if (post.getTitle().equals(title)) {
-//					response = post;
-//					break;
-//				}
-//			}
-//			return response;
-//		}
+		// Méthode qui permet de récupèrer une formation selon son titre
+		public Formation getFormationByTitle(String formationTitle) {
+			Formation res = null;
+			for (Formation formation : lesFormations) {
+				if (formation.getTitre().equals(formationTitle)) {
+					res = formation;
+					break;
+				}
+			}
+			return res;
+		}
 }

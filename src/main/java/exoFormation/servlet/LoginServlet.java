@@ -11,7 +11,7 @@ import jakarta.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class LoginServlet
  */
-@WebServlet(urlPatterns = "/login")
+@WebServlet("/login")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -20,7 +20,6 @@ public class LoginServlet extends HttpServlet {
      * Default constructor. 
      */
     public LoginServlet() {
-        // TODO Auto-generated constructor stub
     }
 
 	/**
@@ -28,14 +27,6 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		//Pour garder les login et password sur le formulaire
-		String login = request.getParameter("txtLogin");
-		String password = request.getParameter("txtPassword");
-		if(login==null) login ="";
-		if(password==null) password="";
-		request.setAttribute("login", login);
-		request.setAttribute("password", password);
-
 		response.sendRedirect(request.getContextPath());
 	}
 
@@ -43,14 +34,25 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("Passé dans le doPost");
+		//Récupération des valeurs du formulaire
 		String login = request.getParameter("txtLogin");
 		String password = request.getParameter("txtPassword");
 		
+		//Si c'est bon
 		if(login.equals("Vince") && password.equals("pass")) {
+			//je redirige vers la page suivante
 			String contextPath = request.getContextPath();
 			response.sendRedirect(contextPath + "/accueil");
 			
 		}else {
+			//Sinon 
+			//Pour garder les login et password sur le formulaire
+			if(login==null) login="";
+			if(password==null) password="";
+			request.setAttribute("login", login);
+			request.setAttribute("password", password);
+			
 			doGet(request, response);
 		}
 	}
